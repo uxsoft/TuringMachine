@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TuringMachine
 {
-    public abstract class TuringMachine
+    public class TuringMachine
     {
         public TuringMachine(Func<int, char, Transition> transitionFunction) : this(0, new int[] { int.MaxValue, int.MinValue }, ' ', transitionFunction)
         {
@@ -43,12 +43,12 @@ namespace TuringMachine
                 else HeadPosition++;
 
             }
-            return new Tuple<int, string>(State, word);
+            return new Tuple<int, string>(State, new string(Tape));
         }
 
         private char GetSymbol(char[] word, int head)
         {
-            if (head > 0 && head < word.Length)
+            if (head >= 0 && head < word.Length)
                 return word[head];
             else return BlankSpaceSymbol;
         }

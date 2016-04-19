@@ -50,7 +50,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="AcceptsWordInFormat.cs" />
+    <Compile Include="BubbleSort.cs" />
+    <Compile Include="TuringMachineAssertExtensions.cs" />
+    <Compile Include="ReplaceAsWithBs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
