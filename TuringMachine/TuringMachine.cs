@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,13 +36,15 @@ namespace TuringMachine
             {
                 char currentSymbol = GetSymbol(Tape, HeadPosition);
                 Transition t = TransitionFunction(State, currentSymbol);
+
+                Debug.WriteLine($"({State}, {currentSymbol}) -> ({t.NextState}, {t.Write ?? currentSymbol}, {t.MovementDirection}))");
+
                 State = t.NextState;
                 if (t.Write.HasValue)
                     Tape[HeadPosition] = t.Write.Value;
                 if (t.MovementDirection == Direction.Left)
                     HeadPosition--;
                 else HeadPosition++;
-
             }
             return new Tuple<int, string>(State, new string(Tape));
         }
