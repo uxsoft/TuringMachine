@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transition.cs" />
     <Compile Include="TuringMachine.cs" />
+    <Compile Include="TuringMachineExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
