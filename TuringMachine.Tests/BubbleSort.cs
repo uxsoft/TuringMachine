@@ -112,5 +112,11 @@ namespace TuringMachine.Tests
         {
             tm.ProcessWord("aaa").AssertProduced("aaa");
         }
+
+        [TestMethod]
+        public void caba()
+        {
+            tm.ProcessWord("caba").AssertProduced("aabc");
+        }
     }
 }
