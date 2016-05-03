@@ -55,6 +55,7 @@
     <Compile Include="TuringMachineAssertExtensions.cs" />
     <Compile Include="ReplaceAsWithBs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="w101wRTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TuringMachine\TuringMachine.csproj">

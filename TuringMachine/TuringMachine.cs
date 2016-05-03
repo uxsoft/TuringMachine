@@ -37,7 +37,7 @@ namespace TuringMachine
                 char currentSymbol = GetSymbol(Tape, HeadPosition);
                 Transition t = TransitionFunction(State, currentSymbol);
 
-                Debug.WriteLine($"({State}, {currentSymbol}) -> ({t.NextState}, {t.Write ?? currentSymbol}, {t.MovementDirection}))");
+                Debug.WriteLine($"({State}, {currentSymbol}) -> ({t.NextState}, {t.Write ?? currentSymbol}, {t.MovementDirection}); {new String(Tape).Insert(HeadPosition, $"(q{State})")}");
 
                 State = t.NextState;
                 if (t.Write.HasValue)

@@ -24,5 +24,6 @@ namespace TuringMachine.Tests
             r.AssertAccepted();
             Assert.AreEqual(expected, r.Item2);
         }
+
     }
 }
